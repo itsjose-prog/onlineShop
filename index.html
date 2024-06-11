@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dunga Shop</title>
+    <link rel="icon" type="image/x-icon" href="/images/image6.jpg">
+    <h1 style="display: flex; color: black;">DUNGA LOOKS CLOTHING ENTERPRISE</h1>
+    <marquee><h1 style="color:blue;"> Welcome to Dunga Shop and enjoy variety of products</h1></marquee>
+    <style>
+      body {
+            background-image: url('images/image6.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+          }
+          table, th, td {
+            border: 1px solid white;
+            border-collapse: collapse;
+          }
+              th, td {
+                  background-color: #96D4D4;
+                }
+      h1   {color: black;} 
+      h1 {
+        color: blue;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 300%;
+        padding: 10px;
+        margin: 10px; 
+        }
+    p {
+          color: black;
+          font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+          font-size: 160%;
+          background-image: url('images/image6.jpg'); 
+      }
+    </style>
+</head> 
+    <body>
+      <p>Hello dear,</p>
+      <p>we are thrilled to anounce to you new offers, come buy sneakers worth above KES 3000 and get free brand Versace slides</p>
+      <table>
+        <tr>
+          <th>Type</th>
+          <th>Size</th>
+          <th>Color</th>
+          <th>Price (KES)</th>
+          <th>In Stock</th>
+     </tr>
+        <tr>
+          <td>Jordan 4</td>
+          <td>42</td>
+          <td>Black</td>
+          <td> 4200</td>
+          <td> 13</td>
+    </tr>
+        <tr>
+          <td>AirMax 90</td>
+          <td>37</td>
+          <td>Pink</td>
+          <td> 3800</td>
+          <td>8</td>
+        </tr>
+    <tr>
+          <td>Airforce 1</td>
+          <td>38</td>
+          <td> White</td>
+          <td> 3000</td>
+          <td>11</td>
+      </tr>
+  </table>
+        <p><audio controls>
+            <source src="media/Tinie Tempah - They Don_t Know (feat. Kid Ink, Stefflon Don & AoD).m4a" type="audio/mpeg">
+          Your browser does not support the audio element.
+      </audio></p>
+          <video width="320" height="240" controls>
+              <source src="media/Protoje - Who Knows ft. Chronixx (Official Music Video)(720P_HD).mp4" type="video/mp4">
+            <source src="media/Romain Virgo - Soul Provider (Brighter Days Riddim) - prod. by Silly Walks Discotheque(720P_HD).mp4" type="video/mp4">
+          Your browser does not support the video element.
+    </video>
+    <p>
+    <p>Count numbers: <output id="result"></output></p>
+    <button onclick="startWorker()">Start Worker</button>
+    <button onclick="stopWorker()">Stop Worker</button>
+    
+    <script>
+    var w;
+    
+    function startWorker() {
+      if (typeof(Worker) !== "undefined") {
+        if (typeof(w) == "undefined") {
+          w = new Worker("demo_workers.js");
+        }
+        w.onmessage = function(event) {
+          document.getElementById("result").innerHTML = event.data;
+        };
+      } else {
+        document.getElementById("result").innerHTML = "Sorry! No Web Worker support.";
+      }
+    }
+    
+    function stopWorker() {
+      w.terminate();
+      w = undefined;
+    }
+    </script></p>
+    <h1<p>We have the following sneakers available:</p></h1>
+    <ul>
+      <li>Jordan 4</li>
+      <li>Convas</li>
+      <li>AirMax</li>
+      <li>Versace Slides</li>
+      <li>Puma</li>
+      <li>Louis Vuittion</li>
+    </ul>
+    </body>
+</html>
+
+    
